@@ -1,11 +1,12 @@
 ---
 import Links from './Links.astro'
 import Menu from './Menu.astro'
+import Billybo from '../../public/images/billy.mp3'
 ---
 <header transition:persist class="py-2 px-2 mx-auto max-w-xl lg:py-2 lg:px-2">
     <div class="flex flex-col items-center justify-center">
     <Links/>
-        <img src="https://lh6.googleusercontent.com/zKxjsv90z_qTPCFlRC3Vl8E8EedAKFUHAyv-M9P0Fcvv5R_durG7vGjkXV3bDOtObN2aVq_W6FPH9K-aFBnycdM=w16383" alt="billybobby" class="w-14 profile-picture">
+        <img src="/images/billybobby.png" alt="billybobby" class="w-14 profile-picture">
         <div class="justify-center text-center">
           <span class="text-5xl font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-800 text-3d">BILLYBOBBY14</span>
           <span class="font-bold block text-2xl text-neon-orange">THE PRESIDENT OF MUSIC</span>
@@ -25,11 +26,11 @@ import Menu from './Menu.astro'
   </button>
 </nav>
 </header> 
-<audio id="audioPlayer" src="../../public/images/billy.mp3" hidden></audio>
+<audio id="audioPlayer" src={Billybo} hidden></audio>
 
 
 
-<script type="module">
+<script type="module" is:inline>
   const playButton = document.getElementById('playButton');
   const audioPlayer = document.getElementById('audioPlayer');
 
