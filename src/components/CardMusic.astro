@@ -1,0 +1,17 @@
+---
+interface Props {
+	dir: string;
+}
+
+const {dir} = Astro.props
+---
+
+
+<div class="flex gap-2">
+
+    <a href={dir} class="transition-transform group ">
+        <div class="transform transition duration-300 ease-in-out hover:scale-125">
+            <slot/>
+        </div>
+</div>
+

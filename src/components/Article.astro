@@ -1,0 +1,24 @@
+---
+interface Props {
+    href: string;
+	img: string;
+    altImg: string;
+    body : string;
+    title: string;
+}
+
+const {href, altImg, img, body, title} = Astro.props
+---
+    <li>
+        <article>
+            <a href={href} class="unset relative flex flex-col gap-8 md:flex-row w-full group no-underline items-center hover:bg-black/20 rounded p-4 transition border border-black/20 bg-black/10">
+                <div class="flex justify-center items-center relative">
+                    <img src={img} alt={altImg} class="w-48 h-48 rounded overflow-hidden shadow-lg transform group-hover:scale-105 transition">
+                </div>
+                <div class="flex-1 justify-center items-center">
+                    <h2 class="text-3xl dark:text-yellow-300 text-yellow-950">{title}</h2>
+                    <p class="leading-relaxed text-white">{body}</p>
+                </div>
+            </a>
+        </article>
+    </li>

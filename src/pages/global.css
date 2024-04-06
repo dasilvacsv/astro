@@ -1,0 +1,23 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add your custom styles here */
+.bg-neon {
+  background-image: linear-gradient(to right, #ff2079, #ff7e5f);
+}
+
+.text-neon {
+  color: #ff2079; /* Example of using a custom color */
+}
+
+/* Custom fonts */
+@layer base {
+  h1, h2, h3 {
+    @apply font-orbitron;
+  }
+  body {
+    @apply font-montserrat;
+  }
+}

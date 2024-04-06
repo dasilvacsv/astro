@@ -1,0 +1,15 @@
+---
+// No hay necesidad de importar React o usar frontmatter aquí,
+// ya que solo usaremos este componente para cargar un script en el cliente.
+const playAudio = (src) => {
+  const audio = new Audio(src);
+  audio.play();
+};
+---
+
+<script type="module">
+  // Esta función se expone globalmente para que pueda ser llamada desde cualquier lugar.
+  window.playAudio = ({ detail: { src } }) => {
+    playAudio(src);
+  };
+</script>

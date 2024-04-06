@@ -1,0 +1,15 @@
+---
+import CardMusic from "./CardMusic.astro";
+import {headerItems } from "../services/images.ts"
+---
+
+
+<div class="flex justify-center items-center gap-4 px-4 py-2">
+    {headerItems.map((item) => (
+      <CardMusic dir={item.dir}>
+        <img src={item.imagePath} alt={item.alt} />
+      </CardMusic>
+    ))}
+  </div>
+
+<style>
